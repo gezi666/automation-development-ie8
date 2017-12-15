@@ -183,9 +183,7 @@ function setKeyItem(key,value) {
 下载地址：https://github.com/douglascrockford/JSON-js
 
 #### 8、IE跨域下出现{"readyState":0,"status":0,"TypeError"...}
-IE下jquery进行跨域请求需要两步：<br/>
-a,引入jquery.xdomainrequest.min.js<br/>
-b,浏览器 工具->Internet选项->安全->自定义级别->其他->通过域访问数据源->启用
+对浏览器进行设置 工具->Internet选项->安全->自定义级别->其他->通过域访问数据源->启用
 
 #### 9、透明度兼容性：
 a、使用rgba背景色做透明的：<br/>
