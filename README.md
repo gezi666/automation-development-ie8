@@ -179,7 +179,7 @@ function setKeyItem(key,value) {
 
 #### 7、“JSON”未定义
 引入json2.js
-注：本模板已经引入
+<span style="#949449">注：本模板已经引入</span><br/>
 下载地址：https://github.com/douglascrockford/JSON-js
 
 #### 8、IE跨域下出现{"readyState":0,"status":0,"TypeError"...}
