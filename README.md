@@ -149,7 +149,7 @@ $.ajax({
 ```
 
 #### 4、IE6,IE7下overflow：hidden无效
-解决办法：position:relative; 或者 *position:relative; /* for IE6,IE7 */ 即可解决该bug。
+解决办法：position:relative; 或者 *position:relative; /* for IE6,IE7 */ 即可解决该bug。<br/>
 既：
 ```css
 position: relative;
