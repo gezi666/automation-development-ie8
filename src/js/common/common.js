@@ -138,11 +138,26 @@ function GetUrlParam(){
     }
     return theRequest;
 }
-function ajaxPost(url,params,callBack,errorFn) {
-    ajax('POST',url,params,callBack,errorFn)
+
+/***
+ * ajax的post请求
+ * @param url 请求的url
+ * @param params 请求参数
+ * @param successBack 成功之后的回调函数
+ * @param errorBack 失败之后的回调函数
+ */
+function ajaxPost(url,params,successBack,errorBack) {
+    ajax('POST',url,params,successBack,errorBack);
 }
-function ajaxGet(url,params,callBack,errorFn) {
-    ajax('GET',url,params,callBack,errorFn)
+/***
+ * ajax的get请求
+ * @param url 请求的url
+ * @param params 请求参数
+ * @param successBack 成功之后的回调函数
+ * @param errorBack 失败之后的回调函数
+ */
+function ajaxGet(url,params,successBack,errorBack) {
+    ajax('GET',url,params,successBack,errorBack);
 }
 function ajax(type,wUrl,params,callBack,errorFn) {
     $.ajax({
