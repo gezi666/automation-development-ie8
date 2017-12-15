@@ -178,8 +178,8 @@ function setKeyItem(key,value) {
 ```
 
 #### 7、“JSON”未定义
-引入json2.js
-<span style="#949449">注：本模板已经引入</span><br/>
+引入json2.js<br/>
+注：本模板已经引入<br/>
 下载地址：https://github.com/douglascrockford/JSON-js
 
 #### 8、IE跨域下出现{"readyState":0,"status":0,"TypeError"...}
@@ -188,16 +188,16 @@ a,引入jquery.xdomainrequest.min.js<br/>
 b,浏览器 工具->Internet选项->安全->自定义级别->其他->通过域访问数据源->启用
 
 #### 9、透明度兼容性：
-a、使用rgba背景色做透明的：
-背景色变成：background: #000 \9;
-再加IE9及以下的透明度设置方法
+a、使用rgba背景色做透明的：<br/>
+背景色变成：background: #000 \9;<br/>
+再加IE9及以下的透明度设置方法<br/>
 ```css
 opacity=80
 -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 ```
-b、直接使用opacity设置透明度的
-添加IE9及以下的透明度设置方法
+b、直接使用opacity设置透明度的<br/>
+添加IE9及以下的透明度设置方法<br/>
 ```css
 opacity=80
 -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -215,7 +215,7 @@ innput.txt{
 
 #### 11、布局错位问题:
 a、没有清除浮动的清除浮动即可,如：<br/>
-html:<br/>
+html:
 ```javascript
 <div class="parent clear">
   <div class="child">child1</div>
@@ -234,10 +234,10 @@ css:
 ```
 
 #### 12、css伪类问题：
-将用伪类实现的效果换成其他实现方式；
+将用伪类实现的效果换成其他实现方式；<br/>
 主要是针对IE7内核，如果不用兼容IE7内核，则不用处理此类问题。
 
-#### 13、ul元素中li 两端顶头，间距均等问题：
+#### 13、ul元素中li 两端顶头，间距均等问题
 li使用float为left，加上margin-left,
 然后ul同时也加上margin-left，其值使用与li相对应的负值,如：<br/>
 html:
