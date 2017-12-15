@@ -1,3 +1,5 @@
+var URL = 'http://192.168.0.0/';
+
 /***
  * 去空格
  * @returns {string}
@@ -135,6 +137,28 @@ function GetUrlParam(){
         }
     }
     return theRequest;
+}
+function ajaxPost(url,params,callBack,errorFn) {
+    ajax('POST',url,params,callBack,errorFn)
+}
+function ajaxGet(url,params,callBack,errorFn) {
+    ajax('GET',url,params,callBack,errorFn)
+}
+function ajax(type,wUrl,params,callBack,errorFn) {
+    $.ajax({
+        url: URL + wUrl,
+        type: type,
+        data: params,
+        dataType: 'json',
+        contentType: "application/json",
+        crossDomain: true == !(document.all),
+        success: function (res) {
+            if(callBack) callBack(res);
+        },
+        error: function (err) {
+            if(errorFn) errorFn(err);
+        }
+    })
 }
 
 $(document).ready(function(){
