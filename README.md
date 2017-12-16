@@ -278,6 +278,20 @@ css:
 first-child是CSS2的内容，但是last-child就不是了，所以IE8不买账。<br/>
 推荐的做法不是使用last-child，而是给最后一个元素设置一个.last的class，然后对此进行样式设置，这样就全部兼容了。
 
+#### 16、Media Query(媒体查询)
+IE8似乎无法识别Media Query，所以需要hack一下啦！推荐采用Respond.js解决此问题。<br/>
+Respond.js让IE6-8支持CSS3 Media Query。<br/>
+Bootstrap里面就引入了这个js文件，从名字看出来是自适应的兼容。<br/>
+使用：考虑到IE9是支持CSS3的，所以直接在HTML页面的head标签中添加脚本引用即可：<br/>
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]—>
+官方demo地址：http://scottjehl.github.com/Respond/test/test.html
+
+a.在css中正常用 min/max-width media <br/>
+b.引入respond.min.js，但要在css的后面 <br/>
+（越早引入越好，在ie下面看到页面闪屏的概率就越低，因为最初css会先渲染出来，如果respond.js加载得很后面，这时重新根据media query解析出来的css会再改变一次页面的布局等，所以看起来有闪屏的现象）
+
    ### <a name="reference">&sect; 参考</a>
 * [npmjs](https://www.npmjs.com/)
 * [gulpjs](http://www.gulpjs.com.cn/)
