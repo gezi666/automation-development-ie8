@@ -274,6 +274,10 @@ css:
 还没完，如果你在此背景之上放置了链接，那这个链接是无法点击的。<br/>
 一般情况下的解决办法是为链接或按钮添加position:relative使其相对浮动。
 
+#### 15、last-child
+first-child是CSS2的内容，但是last-child就不是了，所以IE8不买账。<br/>
+推荐的做法不是使用last-child，而是给最后一个元素设置一个.last的class，然后对此进行样式设置，这样就全部兼容了。
+
    ### <a name="reference">&sect; 参考</a>
 * [npmjs](https://www.npmjs.com/)
 * [gulpjs](http://www.gulpjs.com.cn/)
