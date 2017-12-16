@@ -20,9 +20,7 @@ $ npm run build //用于生产环境
 ```
 浏览器输入地址查看模板：http://localhost:3000/html/index/
 
-
 ### 项目目录结构
-
 ```
 .
 ├─ build/               # gulp 任务配置目录
@@ -39,40 +37,6 @@ $ npm run build //用于生产环境
 ├── package.json        # （这个就不用多解释了吧）
 ```
 
-
-### 安装必要的开发工具包
-```
-   babel-core         # babel-core 的作用是把 js 代码分析成 ast 方便各个插件分析语法进行相应的处理。
-   babel-preset-env   # babel-preset-env可以根据配置的目标运行环境自动启用需要的 babel 插件
-   browser-sync       # BrowserSync能让浏览器实时、快速响应您的文件的更改
-   del                # 文件的删除操作
-   gulp               # 用自动化构建工具增强你的工作流程！
-   gulp-babel         # gulp-babel用于es6的语法转化
-   gulp-changed       # 使用 gulp-changed 可以只让更改过的文件传递过管道。
-   gulp-concat        # 使用 gulp-concat  用于文件合并
-   gulp-html-extend   # 可以轻松扩展，包含和替换您的html文件
-   gulp-if            # 可以利用条件判断
-   gulp-imagemin      # 用于图片压缩
-   gulp-less          # 用将less转化成css
-   gulp-load-plugins  # 使用gulp-load-plugins模块，可以加载package.json文件中所有的gulp模块
-   gulp-minify-css    # 压缩css
-   gulp-minify-html   # 压缩html
-   gulp-order         # 文件合并的排序
-   gulp-plumber       # gulp的错误捕获
-   gulp-rev           # 根据静态资源内容，生成md5签名，打包出来的文件名会加上md5签名
-   gulp-sass          # 将scss  转化为css
-   gulp-uglify        # js压缩
-   uglify-js
-```
-
-### 已配置的任务
-   + scripts  js处理支持es6
-   + less     less转化和压缩
-   + html     html的公共组件引入和压缩
-   + img      图片的压缩
-   + concatjs js合并处理
-   
-   > 如果需求不能满足您也可以在npm的网站上找到相应插件的gulp配置写法
 
 ### IE低版本兼容小贴士
 #### IE浏览器hack
@@ -282,10 +246,12 @@ first-child是CSS2的内容，但是last-child就不是了，所以IE8不买账�
 IE8似乎无法识别Media Query，所以需要hack一下啦！推荐采用Respond.js解决此问题。<br/>
 Respond.js让IE6-8支持CSS3 Media Query。<br/>
 Bootstrap里面就引入了这个js文件，从名字看出来是自适应的兼容。<br/>
-使用：考虑到IE9是支持CSS3的，所以直接在HTML页面的head标签中添加脚本引用即可：<br/>
+使用：考虑到IE9是支持CSS3的，所以直接在HTML页面的head标签中添加脚本引用即可：
+```html
 <!--[if lt IE 9]>
   <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]—>
+```
 官方demo地址：http://scottjehl.github.com/Respond/test/test.html
 
 a.在css中正常用 min/max-width media <br/>
