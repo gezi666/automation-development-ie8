@@ -261,6 +261,19 @@ css:
 }
 ```
 
+#### 14、background-size: cover
+如果你想使用background-size: cover设置全屏背景， <br/>
+很遗憾IE8办不到...但可以使用IE独有的AlphaImageLoader滤镜来实现，添加一条如下的CSS样式： <br/>
+```css
+.box{
+   background-size: cover;
+   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale , src='image.img')\9;
+}
+```
+将sizingMethod设置为scale，src设置成背景图片地址就OK了。<br/>
+还没完，如果你在此背景之上放置了链接，那这个链接是无法点击的。<br/>
+一般情况下的解决办法是为链接或按钮添加position:relative使其相对浮动。
+
    ### <a name="reference">&sect; 参考</a>
 * [npmjs](https://www.npmjs.com/)
 * [gulpjs](http://www.gulpjs.com.cn/)
