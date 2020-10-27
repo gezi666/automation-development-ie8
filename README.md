@@ -9,7 +9,7 @@
 
 **项目运行**
 ```javascript
-$ git clone https://github.com/jusfoun-FE/automation-development-ie8.git
+$ git clone https://github.com/gezi666/automation-development-ie8.git
 
 $ cd automation-development-ie8
 
