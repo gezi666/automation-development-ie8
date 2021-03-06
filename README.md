@@ -4,7 +4,7 @@
 
 特点：功能自动化,可配置, 提供IE8兼容解决方案，提供常用模板。
 
-不足：不能解决所有IE8及以下问题，需要心细。
+不足：不能解决所有IE8及以下问题，需要根据实际情况自行处理。
 
 
 **项目运行**
@@ -88,7 +88,7 @@ css:
 }
 ```
 #### 1、IE8及以下，布局问题
-不使用flex，box-size:border-box，calc
+不使用flex、box-sizing:border-box、calc
 
 #### 2、ie下进行跨域请求解决方案
 引入jquery.xdomainrequest.min.js
